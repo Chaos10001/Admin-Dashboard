@@ -1,0 +1,65 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+$body-bg: #f8f8f8;
+$container-bg:white;
+
+//Color System
+$purple:#800080;
+$white:#ffff;
+$blue:#0000ff;
+$lightBlue:#add8e6;
+$cambridgeBlue:#bfd28f;
+$orange:#ffa500;
+$red:#ff0000;
+$green:#008000;
+
+$colors:(
+    'purple':$purple,
+    'white':$white,
+    'blue':$blue,
+    'lightBlue':$lightBlue,
+    'cambridgeBlue':$cambridgeBlue,
+    'orange':$orange,
+    'red':$red,
+    'green':$green
+);
+
+//variant
+$primary: $purple;
+$secondary:$lightBlue;
+$sucess:$green;
+
+$theme-colors:(
+    'primary':$primary,
+    'secondary':$secondary,
+    'success':$success
+);
+
+$theme-colors-rgb: map-loop($theme-colors, to-rgb,'$value');
+
+$container-padding:24px;
+$sidebar-width:250px;
+$sidebar-width-collapsed:90px;
+$link-color:$primary;
+$border-color: #e93cef;
+$btn-txt-color:$white;
+
+.dark {
+    $container-bg:#111c44;
+    $body-bg:#0f172a;
+    
+    $text-color:$white;
+    $card-bg:$container-bg;
+    $body-color: white;
+    $btn-txt-color:black;
+    --#{$variable-prefix}body-bg: #{$body-bg};
+    --#{$variable-prefix}text-color: #{$text-color};
+    --#{$variable-prefix}container-bg: #{$container-bg};
+    --#{$variable-prefix}card-bg: #{$card-bg};
+    --#{$variable-prefix}body-color: #{$body-color};
+    @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+}
+
